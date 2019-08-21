@@ -1,4 +1,5 @@
-# iqos.web
+# [iqos.web](https://0x77dev.github.io/iqos.web/index.html)
+[Go to the app](https://0x77dev.github.io/iqos.web/index.html)
 ![iQOS Logo](https://upload.wikimedia.org/wikipedia/ru/8/83/Logo_iqos_black.png)
 iQOS Holder status using javascript and your browser 
 ---
