@@ -1,0 +1,18 @@
+html,
+body {
+  padding: 15px;
+  background-color: #0a0a0a;
+  color: #fafafa;
+  font-family: monospace;
+}
+a {
+  color: aliceblue;
+}
+button {
+  border: 15px;
+  background: whitesmoke;
+  font-size: 8vw;
+}
+h1 {
+  font-size: 10vw;
+}
