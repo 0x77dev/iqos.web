@@ -6,3 +6,4 @@ iQOS Holder status using javascript and your browser
 ![iQOS Device](https://d2esxfdt32vo54.cloudfront.net/design/themes/royal/media/images/home/blocks/family/iqos_2.4plus.png)
 ---
 iQOS logo, device and all about iqos is Philip Morris International property.
+` MIT License ` ` Maked By 0x77 `
