@@ -1,5 +1,7 @@
 const log = (data) => {
-    document.querySelector("pre").innerHTML = document.querySelector("pre").innerHTML + data + "\n";
+	const logtHistory = document.querySelector("pre");
+    logtHistory.innerHTML = logtHistory.innerHTML + data + "\n";
+    logtHistory.scrollTop = logtHistory.scrollHeight;
 };
 const status = (data) => {
     document.querySelector("h1").innerHTML = data;
