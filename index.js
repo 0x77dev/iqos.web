@@ -1,5 +1,27 @@
+Notification.requestPermission();
+const notifyMe = (data, params) => {
+    // Let's check if the browser supports notifications
+    if (!("Notification" in window)) {
+        alert("This browser does not support system notifications");
+        // This is not how you would really do things if they aren't supported. :)
+    }
+
+    // Let's check whether notification permissions have already been granted
+    else if (Notification.permission === "granted") {
+        // If it's okay let's create a notification
+        var notification = new Notification(data, params);
+    }
+
+    // Otherwise, we need to ask the user for permission
+    else if (Notification.permission !== 'denied') {
+
+    }
+
+    // Finally, if the user has denied notifications and you 
+    // want to be respectful there is no need to bother them any more.
+}
 const log = (data) => {
-	const logtHistory = document.querySelector("pre");
+    const logtHistory = document.querySelector("pre");
     logtHistory.innerHTML = logtHistory.innerHTML + data + "\n";
     logtHistory.scrollTop = logtHistory.scrollHeight;
 };
@@ -67,10 +89,19 @@ const handleCharacteristicValueChanged = (event) => {
             status("Charging");
         } else {
             status("Charged: " + batteryValue + "%");
+            notifyMe("iQOS", {
+                icon: 'https://cdn.imgbin.com/0/2/4/imgbin-iqos-heat-not-burn-tobacco-product-logo-philip-morris-international-iqos-xqwK6yJ1uaiyXB71sHZz7Cus6.jpg',
+                body: 'holder charged',
+            });
+
         }
     } else {
         log("[IQOS] " + "Holder not on charge");
         status("Holder not on charge");
+        notifyMe("iQOS", {
+            icon: 'https://cdn.imgbin.com/0/2/4/imgbin-iqos-heat-not-burn-tobacco-product-logo-philip-morris-international-iqos-xqwK6yJ1uaiyXB71sHZz7Cus6.jpg',
+            body: 'holder not on charge',
+        });
     }
 }
 const getSupportedProperties = (characteristic) => {
